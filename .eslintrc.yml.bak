@@ -1,0 +1,62 @@
+env:
+  browser: true
+  es2021: true
+extends:
+  - airbnb
+  - plugin:prettier/recommended
+  - prettier/react
+parser: '@typescript-eslint/parser'
+parserOptions:
+  ecmaFeatures:
+    jsx: true
+  ecmaVersion: 12
+  sourceType: module
+plugins:
+  - react
+  - '@typescript-eslint'
+rules:
+  react/jsx-uses-react: off
+  react/react-in-jsx-scope: off
+  react/jsx-filename-extension:
+    - 1
+    - extensions:
+        - .js
+        - .jsx
+  react/no-unescaped-entities:
+    - error
+    - forbid:
+        - ">"
+        - "}"
+  no-console: off
+  no-restricted-syntax:
+    - error
+    - selector: CallExpression[callee.object.name='console'][callee.property.name!=/^(log|warn|error|info|trace)$/]
+      message: Unexpected property on console object was called
+  max-len:
+    - warn
+    - code: 120
+  jsx-a11y/click-events-have-key-events: off
+  jsx-a11y/no-noninteractive-element-interactions: off # optionally should be removed, click events should be obvious
+  jsx-a11y/no-static-element-interactions: off # optionally should be removed, click events should be obvious
+  react/state-in-constructor: off # optionally should be removed, migrate to functional components
+  react/no-access-state-in-setstate: off # optionally should be removed, move to functional components, setstate is async
+  react/destructuring-assignment: off # optionally should be removed, make code cleaner and more readable
+  no-unused-vars: warn # optionally should be removed, to enforce clean code
+  react/prefer-stateless-function: warn # optionally should be removed, to enforce clean code
+  react/no-array-index-key: warn # optionally should be removed, to enforce clean code
+  react/no-unused-state: warn # optionally should be removed, to enforce clean code
+  react/jsx-one-expression-per-line: off # optionally should be removed, could mess with text display
+  react/prop-types: off # optionally should be removed, could mess with text display
+  no-shadow: warn # optionally should be removed, to enforce clean code
+  guard-for-in: off # depends on use case
+  spaced-comment: off # depends on use case
+  jsx-a11y/label-has-associated-control: off # depends on use case
+  class-methods-use-this: warn # can consider refactoring it into a shared utility method
+  import/no-named-as-default: off
+  import/prefer-default-export: off
+  react/jsx-props-no-spreading: off
+  quotes:
+    - warn
+    - single
+    - avoidEscape: true
+      allowTemplateLiterals: false
