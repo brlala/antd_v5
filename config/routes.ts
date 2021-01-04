@@ -167,6 +167,12 @@ export default [
         ],
       },
       {
+        name: 'table-list',
+        icon: 'table',
+        path: '/list',
+        component: './TableList',
+      },
+      {
         name: 'basic-list',
         icon: 'smile',
         path: '/list/basic-list',
@@ -294,4 +300,4 @@ export default [
   {
     component: '404',
   },
-]
+];
