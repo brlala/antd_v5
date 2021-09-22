@@ -60,7 +60,7 @@
     "@umijs/route-utils": "^1.0.33",
     "ahooks": "^2.0.0",
     "antd": "^4.9.4",
-    "bizcharts": "^3.5.3-beta.0",
+    "bizcharts": "^4.1.11",
     "bizcharts-plugin-slider": "^3.0.1",
     "classnames": "^2.2.6",
     "eslint": "^7.17.0",
